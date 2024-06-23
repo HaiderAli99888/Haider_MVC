@@ -1,5 +1,5 @@
-﻿using BulkyWeb.Data;
-using BulkyWeb.Models;
+﻿using Bulky.DataAcess.Data;
+using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyWeb.Controllers
@@ -79,7 +79,7 @@ namespace BulkyWeb.Controllers
         public IActionResult DeletePost(int? id)
         {
             Category? obj= _db.Categories.Find(id);
-            if (obj==null)
+            if (obj == null)
             {
                 return NotFound();
             }
